@@ -141,5 +141,6 @@ int main(){
     searchBST(root,10);
     deleteBST(root, 2);
     inorder(root);
+    cout<<isBST(root);
 
 }
