@@ -14,6 +14,25 @@ struct node{
     }
 };
 
+bool find(node* root, int left, int right){
+    if(root == NULL){
+        return true;
+    }
+    return left < root->data &&
+            right > root->data &&
+            find(root->left, left, root->data) &&
+            find(root->right, root->data, right);
+}
+
+
+bool isBST(node* root){
+    if(root == NULL){
+        return true;
+    }
+    return find(root, INT16_MIN, INT16_MAX);
+}
+
+
 
 struct node* inorder(struct node* root){
     if(root != NULL){
