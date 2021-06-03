@@ -87,7 +87,7 @@ struct node* minValueNode(struct node* root){
     }
     return current;
     
-}
+} 
 
 struct node* deleteBST(struct node* root, int x){
     if(root == NULL){
